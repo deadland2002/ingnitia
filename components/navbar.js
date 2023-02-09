@@ -3,6 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
+  var open = false;
+
+  const handleHamburger = (event) =>{
+    const parent = document.getElementById("options");
+    if(!open){
+      parent.classList.add(styles.collapse);
+      open = true;
+    }else{
+      parent.classList.remove(styles.collapse);
+      open = false;
+    }
+    console.log(parent);
+  }
   return (
     <>
       <div className={styles.navbar}>
@@ -13,29 +26,29 @@ const Navbar = () => {
             height={1000}
             alt="logo"
             />
-        <ul>
           
-          <li>
+          <li className={styles.hamburger} onClick={handleHamburger} id="hamburger">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2UlEQVR4nO3aOwrCQBiF0QFXo+LafVTqpkTtbK4ErLRyTPAXz1lAEuZCpvlaAwAAAAAA+GNJlkl2Sc7hU8MZbpMsesdYJbl+/Bk8G8501TPI8eVRjOXw7hizJLfRXs+z4WxnBvnVQfyyJrd/7wJxqU/p0nWpP0ZZJNkkOU36if/hlGSdZN41BgAAAAAAAAAA9FG/j0r9XpT6vSD1ezHq92LU78Wo3wtRvxehfgcAAAAAAAAA4BvU76NSvxelfi9I/V6M+r0Y9Xsx6vdC1O9FqN8BAAAAAIBGa3dzrLjHogbwCQAAAABJRU5ErkJggg==" />
           </li>
+        <ul id="options">
 
           <li>
             <a href="/">Home</a>
           </li>
           <li>
-            <Link href="/commingsoon">About</Link>
+            <Link href="/CommingSoon">About</Link>
           </li>
           <li>
             <Link href="/Event">Events</Link>
           </li>
           <li>
-            <Link href="/commingsoon">Sponsors</Link>
+            <Link href="/CommingSoon">Sponsors</Link>
           </li>
           <li>
-            <Link href="/commingsoon">Gallery</Link>
+            <Link href="/CommingSoon">Gallery</Link>
           </li>
           <li>
-            <Link href="/commingsoon">Contact Us</Link>
+            <Link href="/CommingSoon">Contact Us</Link>
           </li>
         </ul>
       </div>
