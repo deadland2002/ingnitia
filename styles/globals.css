@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: "samarkan";
-  src: url("../public/font/samarkan.ttf");
+  src: url("../public/font/samarkan.TTF");
 }
 
 @keyframes outline {
