@@ -18,12 +18,12 @@ body {
 
 @font-face {
   font-family: "digitalfont";
-  src: url("../public/font/digital-7.ttf");
+  src: url("/font/digital-7.ttf");
 }
 
 @font-face {
   font-family: "samarkan";
-  src: url("../public/font/samarkan.TTF");
+  src: url("/font/samarkan.TTF");
 }
 
 @keyframes outline {
