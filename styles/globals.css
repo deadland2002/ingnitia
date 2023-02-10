@@ -22,6 +22,11 @@ body {
 }
 
 @font-face {
+  font-family: "CedarvilleCursive";
+  src: url("/font/CedarvilleCursive.ttf");
+}
+
+@font-face {
   font-family: "samarkan";
   src: url("/font/samarkan.TTF");
 }
