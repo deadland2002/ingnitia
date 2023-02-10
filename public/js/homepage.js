@@ -1,9 +1,7 @@
 const countdownDiv = document.getElementById("countdown");
 const Launching = document.getElementById("Launching");
 
-window.onload = () => {
-    setTimeout(()=>{ startTimer() },0)
-};
+startTimer();
 
 function startTimer() {
   var deadline = new Date("Feb 24, 2023 09:00:00").getTime();

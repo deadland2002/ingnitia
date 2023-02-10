@@ -3,12 +3,46 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/EventsPage.module.css";
 import Navbar from "@/components/navbar";
-import data from "@/Data/Department.json";
+import DepartmentData from "@/Data/Department.json";
+import InstitutionalData from "@/Data/Institutional.json";
+import ClubData from "@/Data/Club.json";
 import EventCard from "@/components/EventCard";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Event() {
+  const [Data,setData] = useState(InstitutionalData);
+
+  const removeclass = () =>{
+    const btns = document.querySelectorAll(".BtnEventCategory");
+    for(var i=0 ; i< btns.length ; i++)
+      btns[i].classList.remove("BtnEventCategoryActive")
+  }
+  
+  const addclass = (elem) =>{
+    elem.classList.add("BtnEventCategoryActive")
+  }
+
+  const HandleDepartment = (elem) =>{
+    removeclass();
+    addclass(elem.target);
+    setData(DepartmentData);
+  }
+  
+  const HandleInstitution = (elem) =>{
+    removeclass();
+    addclass(elem.target);
+    setData(InstitutionalData);
+  }
+  
+  const HandleClub = (elem) =>{
+    removeclass();
+    addclass(elem.target);
+    setData(ClubData);
+  }
+  
   return (
     <>
       <Head>
@@ -21,13 +55,22 @@ export default function Home() {
       <Navbar />
 
       <div className={styles.wrapper}>
-        <div>
-          <h2>Department Events</h2>
+        <div className={styles.Title}>
+          <h1>Events</h1>
         </div>
-        <div className={styles.cardHolder}>
-          {data.map((single) => {
-            return <EventCard data={single} key={single.id} />;
-          })}
+
+        <div className={styles.category}>
+          <button onClick={HandleInstitution} className="BtnEventCategory BtnEventCategoryActive">Institutional Level</button>
+          <button onClick={HandleDepartment} className="BtnEventCategory">Department Level</button>
+          <button onClick={HandleClub} className="BtnEventCategory">Club Level</button>
+        </div>
+
+        <div id="BoxMain">
+          <div className={styles.cardHolder}>
+            {Data.map((single) => {
+              return <EventCard data={single} key={single.id} />;
+            })}
+          </div>
         </div>
       </div>
     </>

@@ -4,11 +4,14 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/navbar";
 import Script from "next/script";
+import Timer from "@/components/Timer";
+import { useEffect } from "react";
+import stylesNav from "@/styles/navbar.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
+  
   return (
     <>
       <Head>
@@ -17,6 +20,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./css/logosvg.css" />
       </Head>
+      <Image
+            className={stylesNav.logo} 
+            src={"/img/logo.png"}
+            width={1000}
+            height={1000}
+            alt="logo"
+            />
       <Navbar />
       <div className={styles.Hero_text}>
         <svg
@@ -34,21 +44,8 @@ export default function Home() {
           />
         </svg>
 
-        <div className={inter.className + " " + styles.timer}>
-          <div className={styles.launchingOn} id="Launching">
-            Launching On
-          </div>
-
-          <div
-            className={styles.countdown + " countdown "}
-            id="countdown"
-          ></div>
-        </div>
+        <Timer />
       </div>
-
-      <script src="./js/homepage.js"></script>
-
-
     </>
   );
 }

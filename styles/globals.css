@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 body {
-  background: linear-gradient(-45deg, #22110b, #210911, #061c24, #052019);
+  background: linear-gradient(-45deg, #311910, #3b111f, #0a2f3c, #0b4334);
 	background-size: 400% 400%;
   color: white;
   min-height: 100vh;
@@ -54,7 +54,22 @@ body {
 	}
 }
 
+@keyframes increaseopacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
+.fadein{
+  animation: increaseopacity .5s linear forwards;
+}
+
+.BtnEventCategoryActive{
+  background-color: rgba(255, 249, 249, 0.3) !important;
+}
 
 :root {
   --d: 700ms;

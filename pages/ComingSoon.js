@@ -1,6 +1,6 @@
 import Navbar from "@/components/navbar";
 import Head from "next/head";
-import styles from "@/styles/CommingSoon.module.css"
+import styles from "@/styles/ComingSoon.module.css"
 const CommingSoon=()=>{
     return(
         <>
@@ -12,7 +12,7 @@ const CommingSoon=()=>{
             <div className={styles.wrapper}>
                 <div className={styles.box}>
                     <h1>
-                        Comming Soon
+                        Coming Soon . . .
                     </h1>
                 </div>
             </div>
