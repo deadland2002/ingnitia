@@ -1,0 +1,100 @@
+[
+    {
+        "Id":"1",
+        "RollNo":"2101640700216",
+        "Name":"Sankalp Khanna",
+        "Position":"President",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"2",
+        "RollNo":"2101640100121",
+        "Name":"Himanshi Shukla",
+        "Position":"Vice—President",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"3",
+        "RollNo":"0012008",
+        "Name":"Komal Anshwani",
+        "Position":"Vice—President",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"4",
+        "RollNo":"0169549",
+        "Name":"HarshitaRao",
+        "Position":"Secretary",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"5",
+        "RollNo":"2101641520111",
+        "Name":"Raj Pandey",
+        "Position":"Technical Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"6",
+        "RollNo":"2101641520151",
+        "Name":"Vidit Pandey",
+        "Position":"Technical Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"7",
+        "RollNo":"2101640500084",
+        "Name":"Sneha Pandey",
+        "Position":"Cultural Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"8",
+        "RollNo":"0082931",
+        "Name":"Vanshika Singh",
+        "Position":"Cultural Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"9",
+        "RollNo":"0014304",
+        "Name":"Pranjali Jaiswal",
+        "Position":"Cultural Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"10",
+        "RollNo":"2101640100015",
+        "Name":"Aditi Sharma",
+        "Position":"Treasurer",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"11",
+        "RollNo":"0013995",
+        "Name":"Anshika Shukla",
+        "Position":"Treasurer",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"12",
+        "RollNo":"0014447",
+        "Name":"Rashi Mishra",
+        "Position":"Promotional Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"13",
+        "RollNo":"2101640500008",
+        "Name":"Aditya Kumar",
+        "Position":"Sports Head",
+        "Url"   : "/img/29784.jpg"
+    },
+    {
+        "Id":"14",
+        "RollNo":"2101640500096",
+        "Name":"Vaishnavi Kumar",
+        "Position":"Sports Head",
+        "Url"   : "/img/29784.jpg"
+    }
+]

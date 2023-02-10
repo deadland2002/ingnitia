@@ -4,16 +4,16 @@ import style from "@/styles/EventCard.module.css";
 const EventCard = (props) => {
   return (
     <>
-      <main className={style.pageContent}>
+      <main className={style.pageContent + " fadein"}>
         <div
-          className={style.card}
+          className={style.card + " fadein" }
           style={{ backgroundImage: `url("${props.data.Url}")` }}
         >
-          <div className={style.content}>
-            <h2 className={style.title}>{props.data.Title}</h2>
-            <p className={style.copy}>{props.data.Desc}</p>
+          <div className={style.content + " fadein"}>
+            <h2 className={style.title + " fadein" }>{props.data.Title}</h2>
+            <p className={style.copy + " fadein" }>{props.data.Desc}</p>
             <a href="https://google.co.in" target="_blank">
-              <button className={style.btn}>Register</button>
+              <button className={style.btn + " fadein" }>Register</button>
             </a>
           </div>
         </div>

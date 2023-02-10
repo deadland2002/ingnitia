@@ -1,0 +1,147 @@
+.cardholder{
+    width: calc(100% - 4rem);
+    min-height: 80vh;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 2rem 2rem;
+}
+
+.Card{
+    padding: 1rem 1rem;
+    width: 250px;
+    height: 350px;
+    background-color: rgb(25, 26, 36);
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgb(120, 120, 120);
+    border-radius: 20px;
+    gap: 10px;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.Card img{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    margin-top: 6rem;
+}
+
+.ImageHolder{
+    width: 95%;
+    height: 70%;
+}
+
+.Name{
+    font-size: 20px;
+}
+
+.Position{
+    font-size: 16px;
+    color: rgba(227, 226, 226, 0.536);
+}
+
+.Card:hover{
+    transform: scale(1.05);
+}
+
+.WrapperContact{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 0rem;
+    align-items: center;
+}
+
+.FillForm , .ContactFormWrapper{
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.123);
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    /* backdrop-filter: blur(5px); */
+}
+
+.ContactFormWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details span{
+    color: rgba(227, 226, 226, 0.536);
+}
+
+.details{
+    display: flex;
+    gap: 20px;
+}
+
+.details p{
+    min-width: 100px;
+}
+
+.details h3{
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+}
+
+.Title{
+    font-size: 24px;
+}
+
+.btnwrap{
+    display: flex;
+    gap: 20px;
+}
+
+
+.textareDiv{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+
+.textareDiv textarea{
+    width: calc(100% - 2rem);
+    background-color: rgba(0, 0, 0, 0.312);
+    outline: none;
+    border: 0;
+    padding: 1rem 1rem;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+}
+
+
+
+
+@media (max-width: 850px) {
+    .WrapperContact{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Title{
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .FillForm , .ContactFormWrapper{
+        width: 80%;
+    }
+    .btnwrap , .details{
+        flex-direction: column;
+        gap: 0;
+    }
+}
