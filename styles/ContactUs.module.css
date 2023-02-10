@@ -61,9 +61,10 @@
 
 .FillForm , .ContactFormWrapper{
     width: 350px;
-    background-color: rgba(227, 226, 226, 0.234);
+    background-color: rgba(255, 255, 255, 0.123);
     padding: 1rem 1rem;
     border-radius: 20px;
+    /* backdrop-filter: blur(5px); */
 }
 
 .ContactFormWrapper{
@@ -89,4 +90,57 @@
     text-align: center;
     width: 100%;
     font-size: 24px;
+}
+
+.Title{
+    font-size: 24px;
+}
+
+.btnwrap{
+    display: flex;
+    gap: 20px;
+}
+
+
+.textareDiv{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+
+.textareDiv textarea{
+    width: calc(100% - 2rem);
+    background-color: rgba(0, 0, 0, 0.312);
+    outline: none;
+    border: 0;
+    padding: 1rem 1rem;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+}
+
+
+
+
+@media (max-width: 850px) {
+    .WrapperContact{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Title{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 450px) {
+    .FillForm , .ContactFormWrapper{
+        width: 80%;
+    }
+    .btnwrap , .details{
+        flex-direction: column;
+        gap: 0;
+    }
 }

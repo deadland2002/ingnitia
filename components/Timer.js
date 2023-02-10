@@ -40,7 +40,7 @@ const Timer = () => {
     <>
       <div className={inter.className + " " + styles.timer}>
         <div className={styles.launchingOn} id="Launching">
-          Launching On
+          Launching In
         </div>
 
         <div className={styles.countdown + " countdown "} id="countdown"></div>
