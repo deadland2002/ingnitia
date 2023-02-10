@@ -14,7 +14,6 @@ const Navbar = () => {
       parent.classList.remove(styles.collapse);
       open = false;
     }
-    console.log(parent);
   }
   return (
     <>
