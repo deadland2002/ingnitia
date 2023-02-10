@@ -4,9 +4,9 @@ const cloudinary = require("cloudinary").v2;
 
 export default async function handler(req, res) {
   cloudinary.config({
-    cloud_name: "dwpcdujkq",
-    api_key: "828616356891841",
-    api_secret: "MjyjNWvjsV3wIX8T5b7x6UjNVYE"
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
   });
 
   var data;

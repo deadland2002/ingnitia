@@ -8,31 +8,16 @@ import GalleryCard from "@/components/GalleryCard";
 
 
 
-export async function getStaticProps() {
-  var url = process.env.IMGURL;
-  return {
-    props: {
-      url,
-    },
-  }
-}
 
-
-
-
-
-function Gallery(props) {
+function Gallery() {
   const [data, setData] = useState([]);
-  
-  console.log(props.url)
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       start();
       async function start() {
         const loader = document.getElementById("preloader");
         if (loader) {
-          const res = await fetch(props.url);
+          const res = await fetch('/api/hello');
           var posts = await res.json();
           posts = posts.result;
           setData(posts);
