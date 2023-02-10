@@ -55,20 +55,38 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 2rem 0rem;
+    align-items: center;
 }
 
 .FillForm , .ContactFormWrapper{
     width: 350px;
     background-color: rgba(227, 226, 226, 0.234);
     padding: 1rem 1rem;
+    border-radius: 20px;
 }
 
 .ContactFormWrapper{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .details span{
     color: rgba(227, 226, 226, 0.536);
+}
+
+.details{
+    display: flex;
+    gap: 20px;
+}
+
+.details p{
+    min-width: 100px;
+}
+
+.details h3{
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
 }

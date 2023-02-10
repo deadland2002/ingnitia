@@ -16,8 +16,11 @@ export default async function handler(req, res) {
   var alldata = data.resources;
   var urls = []
 
-  for(var i of alldata){
-    urls.push(i.url)
+  for(var i=0 ; i<alldata.length ; i++){
+    urls.push({
+      "id" : i+1,
+      "url" : alldata[i].url
+    })
   };
   
   res.status(200).json({ result : urls })

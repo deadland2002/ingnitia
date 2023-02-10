@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 body {
-  background: linear-gradient(-45deg, #311910, #3b111f, #0a2f3c, #0b4334);
-	background-size: 400% 400%;
+  background: linear-gradient(90deg, #2f0d0d, #09202c, #1f082c, #300710);
+  background-size: 400% 400%;
   color: white;
   min-height: 100vh;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
   font-size: 16px;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s linear infinite;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0);
 }
 
 * {
@@ -32,42 +36,42 @@ body {
 }
 
 @keyframes outline {
-  0%{
-      stroke-dasharray: 50px;
-      stroke-dashoffset: 0px;
+  0% {
+    stroke-dasharray: 50px;
+    stroke-dashoffset: 0px;
   }
-  100%{
-      stroke-dashoffset: 100px;
-      stroke-dasharray: 500px;
+  100% {
+    stroke-dashoffset: 100px;
+    stroke-dasharray: 500px;
   }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes increaseopacity {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
 
-.fadein{
-  animation: increaseopacity .5s linear forwards;
+.fadein {
+  animation: increaseopacity 0.5s linear forwards;
 }
 
-.BtnEventCategoryActive{
+.BtnEventCategoryActive {
   background-color: rgba(255, 249, 249, 0.3) !important;
 }
 
@@ -78,13 +82,334 @@ body {
   --font-serif: "Cardo", serif;
 }
 
-
-ul{
+ul {
   list-style-type: none;
   text-decoration: none;
 }
 
-a , a:active , a:valid , a:invalid{
+a,
+a:active,
+a:valid,
+a:invalid {
   text-decoration: none;
   color: inherit;
 }
+
+.ImgSize1 img {
+  height: 450px;
+}
+
+.ImgSize2 img {
+  height: 350px;
+}
+
+.ImgSize3 img {
+  height: 200px;
+}
+
+.ImgSize4 img {
+  height: 300px;
+}
+
+.ImgSize5 img {
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+/*          PRELODER    START        */
+
+
+
+
+
+.preloader {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  --path: #ffffff;
+  --dot: #5628ee;
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  transform: translate(-18px, -18px);
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.loader svg polygon {
+  stroke-dasharray: 145 76 145 76;
+  stroke-dashoffset: 0;
+  animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg circle {
+  stroke-dasharray: 150 50 150 50;
+  stroke-dashoffset: 75;
+  animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+.loader.triangle {
+  width: 48px;
+}
+
+.loader.triangle:before {
+  left: 21px;
+  transform: translate(-10px, -18px);
+  animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    infinite;
+}
+
+@keyframes pathTriangle {
+  33% {
+    stroke-dashoffset: 74;
+  }
+
+  66% {
+    stroke-dashoffset: 147;
+  }
+
+  100% {
+    stroke-dashoffset: 221;
+  }
+}
+
+@keyframes dotTriangle {
+  33% {
+    transform: translate(0, 0);
+  }
+
+  66% {
+    transform: translate(10px, -18px);
+  }
+
+  100% {
+    transform: translate(-10px, -18px);
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -18px);
+  }
+
+  75% {
+    transform: translate(0, -36px);
+  }
+
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+
+  50% {
+    stroke-dashoffset: 175;
+  }
+
+  75% {
+    stroke-dashoffset: 225;
+  }
+
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
+
+.loader {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+
+
+
+
+
+
+/*          PRELOADER  END       */
+
+
+
+
+
+
+
+/*        MAP START        */
+
+
+
+
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 80%;
+  border-radius: 20px;
+}
+
+
+
+
+
+/*      MAP END        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       IMPUT BUTTON    START      */
+
+
+
+
+
+
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 190px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:not(:placeholder-shown)+label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+
+
+
+
+
+
+
+
+/*        INPUT BUTTON END       */

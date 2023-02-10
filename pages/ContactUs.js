@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
 import Script from "next/script";
+import Map from "@/components/Map";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,12 @@ export default function ContactUs() {
 
 
     <ContactForm />
+
+
+    <Map/>
+
+
+
       <div className={styles.wrapper}>
         <div className={styles.cardholder}>
           {CommitteeData.map((single) => {
