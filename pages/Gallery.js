@@ -5,17 +5,34 @@ import { useState } from "react";
 import styles from "@/styles/Gallery.module.css"
 import GalleryCard from "@/components/GalleryCard";
 
-function Gallery() {
-  const Imgurl = process.env.ImageUrl;
+
+
+
+export async function getStaticProps() {
+  var url = process.env.IMGURL;
+  return {
+    props: {
+      url,
+    },
+  }
+}
+
+
+
+
+
+function Gallery(props) {
   const [data, setData] = useState([]);
   
+  console.log(props.url)
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       start();
       async function start() {
         const loader = document.getElementById("preloader");
         if (loader) {
-          const res = await fetch("http://localhost:3000/api/hello");
+          const res = await fetch(props.url);
           var posts = await res.json();
           posts = posts.result;
           setData(posts);
